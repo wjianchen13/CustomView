@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cold.swipedelmenu.SwipeMenuLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smlt_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+<!--    android:background="?android:attr/selectableItemBackground"--><!-- 可以实现点击水波纹效果 -->
+    <LinearLayout
+        android:id="@+id/llyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/mine_item_selector"
+        android:paddingLeft="15dp"
+        android:paddingTop="8dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="8dp">
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/ic_head" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="9.5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="match那个帅"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:59"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="侧滑菜单测试"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sure_delete"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="#ffff4a57"
+        android:clickable="true"
+        android:text="确认删除"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ffff4a57"
+        android:text="删除"
+        android:textColor="@android:color/white"/>
+
+</com.cold.swipedelmenu.SwipeMenuLayout>

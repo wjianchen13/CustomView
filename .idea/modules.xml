@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" filepath="$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/customattr/customattr.iml" filepath="$PROJECT_DIR$/customattr/customattr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swipedelmenu/swipedelmenu.iml" filepath="$PROJECT_DIR$/swipedelmenu/swipedelmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewdrawprocedure/viewdrawprocedure.iml" filepath="$PROJECT_DIR$/viewdrawprocedure/viewdrawprocedure.iml" />
     </modules>
   </component>
