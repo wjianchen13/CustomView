@@ -19,7 +19,7 @@ import android.util.TypedValue;
  * desc: 圆形滚动进度条
  * author:
  * date: 2017-10-20 11:30
- * remark: 使用Xfermode设置叠加模式进行绘制
+ * remark: 使用Xfermode设置叠加模式进行绘制，解决常规进度条进度很小第二进度条挤压问题
  */
 public class CircleCornerProgressBar extends AppCompatImageView {
 

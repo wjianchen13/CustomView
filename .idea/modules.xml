@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CustomControls.iml" filepath="$PROJECT_DIR$/CustomControls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Widgets.iml" filepath="$PROJECT_DIR$/Widgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" filepath="$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customattr/customattr.iml" filepath="$PROJECT_DIR$/customattr/customattr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewdrawprocedure/viewdrawprocedure.iml" filepath="$PROJECT_DIR$/viewdrawprocedure/viewdrawprocedure.iml" />
     </modules>
   </component>
 </project>
