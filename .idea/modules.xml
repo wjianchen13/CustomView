@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Widgets.iml" filepath="$PROJECT_DIR$/Widgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" filepath="$PROJECT_DIR$/circlecornerprogressbar/circlecornerprogressbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/customattr/customattr.iml" filepath="$PROJECT_DIR$/customattr/customattr.iml" />
       <module fileurl="file://$PROJECT_DIR$/swipedelmenu/swipedelmenu.iml" filepath="$PROJECT_DIR$/swipedelmenu/swipedelmenu.iml" />

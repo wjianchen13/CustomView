@@ -1,0 +1,1 @@
+view的绘制流程onMeasure,onLayout,onDraw

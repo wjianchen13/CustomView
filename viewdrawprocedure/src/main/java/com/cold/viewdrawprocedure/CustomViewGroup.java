@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 public class CustomViewGroup extends ViewGroup {
 
+
+
 	private static final String TAG = "CustomImgContainer";
 
 	public CustomViewGroup(Context context, AttributeSet attrs, int defStyle)

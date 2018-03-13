@@ -154,6 +154,12 @@ public class CustomView extends View {
 	}
 
 	@Override
+	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+		super.onSizeChanged(w, h, oldw, oldh);
+		System.out.println("======================================> onSizeChanged: ");
+	}
+
+	@Override
 	protected void onDraw(Canvas canvas) {
 		mPaint.setColor(Color.YELLOW);
 		canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);

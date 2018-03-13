@@ -4,16 +4,25 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-<!--    <com.cold.viewdrawprocedure.CustomView
+    <com.cold.viewdrawprocedure.CustomView
+        android:id="@+id/cv_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         custom:titleText="3712"
         android:padding="10dp"
         custom:titleTextColor="#ff0000"
         android:layout_centerInParent="true"
-        custom:titleTextSize="40sp" />-->
+        custom:titleTextSize="40sp" />
 
-    <com.cold.viewdrawprocedure.CustomViewGroup
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_below="@id/cv_test"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text"/>
+
+ <!--   <com.cold.viewdrawprocedure.CustomViewGroup
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="#AA333333" >
@@ -58,12 +67,7 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-    </com.cold.viewdrawprocedure.CustomViewGroup>
-
-    <com.cold.viewdrawprocedure.MyScrollView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        />
+    </com.cold.viewdrawprocedure.CustomViewGroup>-->
 
 
 </RelativeLayout>

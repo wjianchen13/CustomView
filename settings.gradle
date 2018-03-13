@@ -1,1 +1,1 @@
-include ':app', ':circlecornerprogressbar', ':customattr', ':viewdrawprocedure', ':swipedelmenu'
+include ':app', ':circlecornerprogressbar', ':customattr', ':viewdrawprocedure', ':swipedelmenu', ':base'
