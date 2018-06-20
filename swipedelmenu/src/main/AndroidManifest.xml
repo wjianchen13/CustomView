@@ -12,6 +12,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.cold.swipedelmenu.recyclerview.RecyclerViewActivity" />
+        <activity android:name="com.cold.swipedelmenu.refresh.RefreshActivity" />
+        <activity android:name="com.cold.swipedelmenu.viewpager.ViewpagerActivity" />
     </application>
 
 </manifest>

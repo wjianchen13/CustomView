@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:audioview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始动画"
+        android:onClick="onStart"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="停止动画"
+        android:onClick="onEnd"/>
+
+    <com.cold.audioview.widget.AudioView
+        android:id="@+id/av_test"
+        android:layout_width="16dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="#ff00ff00"
+        audioview:linear_width="2dp"
+        audioview:linear_margin="3dp"
+        audioview:linear_padding="2dp"
+        android:visibility="gone"/>
+
+    <com.cold.audioview.widget.AudioLayout
+        android:id="@+id/al_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

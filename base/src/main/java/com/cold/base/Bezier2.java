@@ -53,14 +53,14 @@ public class Bezier2 extends View {
         centerY = h / 2;
 
         // 初始化数据点和控制点的位置
-        start.x = centerX - 200;
-        start.y = centerY;
-        end.x = centerX + 200;
-        end.y = centerY;
-        control1.x = centerX;
-        control1.y = centerY - 100;
-        control2.x = centerX;
-        control2.y = centerY - 100;
+        start.x = centerX;
+        start.y = centerY + 300;
+        end.x = centerX;
+        end.y = centerY - 300;
+        control1.x = centerX - 100;
+        control1.y = centerY + 100;
+        control2.x = centerX - 100;
+        control2.y = centerY + 100;
 
     }
 

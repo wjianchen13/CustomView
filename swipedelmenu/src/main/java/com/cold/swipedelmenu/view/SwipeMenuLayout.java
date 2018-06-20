@@ -1,4 +1,4 @@
-package com.cold.swipedelmenu;
+package com.cold.swipedelmenu.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -14,6 +14,8 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.LinearInterpolator;
+
+import com.cold.swipedelmenu.R;
 
 /**
  * 【Item侧滑删除菜单】
@@ -173,6 +175,11 @@ public class SwipeMenuLayout extends ViewGroup {
     public boolean isIos() {
         return isIos;
     }
+
+    /**
+     * 解决有删除菜单弹出其他菜单可以滑出问题
+     */
+    private boolean move = true;
 
     /**
      * 设置是否开启IOS阻塞式交互
@@ -346,8 +353,15 @@ public class SwipeMenuLayout extends ViewGroup {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        if(ev.getAction() == MotionEvent.ACTION_DOWN) {
+            move = true;
+        }
+        if(isInitViewState(ev)){
+            move = false;
+            return true;
+        }
         //LogUtils.d(TAG, "dispatchTouchEvent() called with: " + "ev = [" + ev + "]");
-        if (isSwipeEnable) { // 是否可以滑动
+        if (isSwipeEnable && move) { // 是否可以滑动
             acquireVelocityTracker(ev);
             final VelocityTracker verTracker = mVelocityTracker;
             switch (ev.getAction()) {
@@ -391,7 +405,8 @@ public class SwipeMenuLayout extends ViewGroup {
                     }
                     float gap = mLastP.x - ev.getRawX();
                     //为了在水平滑动中禁止父类ListView等再竖直滑动
-                    if (Math.abs(gap) > 10 || Math.abs(getScrollX()) > 10) { // getScrollX是针对自己的，不是父控件的 2016 09 29 修改此处，使屏蔽父布局滑动更加灵敏，
+//                    if (Math.abs(gap) > 10 || Math.abs(getScrollX()) > 10) { // getScrollX是针对自己的，不是父控件的 2016 09 29 修改此处，使屏蔽父布局滑动更加灵敏，
+                    if(gap > 5) {
                         getParent().requestDisallowInterceptTouchEvent(true);
                     }
                     //2016 10 22 add , 仿QQ，侧滑菜单展开时，点击内容区域，关闭侧滑菜单。begin
@@ -475,6 +490,22 @@ public class SwipeMenuLayout extends ViewGroup {
             }
         }
         return super.dispatchTouchEvent(ev);
+    }
+
+    /**
+     * 如果有其他view展开了，先关闭
+     * @param
+     * @return
+     */
+    private boolean isInitViewState(MotionEvent ev) {
+        if(ev.getAction() == MotionEvent.ACTION_DOWN) {
+            if (mViewCache != null && mViewCache != this && ev.getX() < getWidth() - getScrollX()) {
+                mViewCache.smoothClose();
+                getParent().requestDisallowInterceptTouchEvent(true);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

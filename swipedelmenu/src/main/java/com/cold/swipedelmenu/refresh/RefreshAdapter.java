@@ -1,4 +1,4 @@
-package com.cold.swipedelmenu;
+package com.cold.swipedelmenu.refresh;
 
 import android.support.annotation.LayoutRes;
 import android.util.Log;
@@ -7,14 +7,16 @@ import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.cold.swipedelmenu.R;
 import com.cold.swipedelmenu.bean.SwipeBean;
+import com.cold.swipedelmenu.view.SwipeMenuLayout;
 
 import java.util.List;
 
 /**
  * Created by baoyz on 2014/6/29.
  */
-public class RecycleViewAdapter extends BaseQuickAdapter<SwipeBean, BaseViewHolder> {
+public class RefreshAdapter extends BaseQuickAdapter<SwipeBean, BaseViewHolder> {
 
     private ISwipeMenuListener mOnSwipeListener;
 
@@ -25,7 +27,7 @@ public class RecycleViewAdapter extends BaseQuickAdapter<SwipeBean, BaseViewHold
     /***********************************************************************
      * 构造函数
      **********************************************************************/
-    public RecycleViewAdapter(@LayoutRes int layoutResId, List<SwipeBean> list) {
+    public RefreshAdapter(@LayoutRes int layoutResId, List<SwipeBean> list) {
         super(layoutResId, list);
     }
 
@@ -78,7 +80,7 @@ public class RecycleViewAdapter extends BaseQuickAdapter<SwipeBean, BaseViewHold
             public void onClick(View v) {
                 Log.d("TAG", "onClick() called with: v = [" + v + "]");
                 if(mOnSwipeListener != null) {
-                    mOnSwipeListener.onClick(RecycleViewAdapter.this, v, baseViewHolder.getAdapterPosition());
+                    mOnSwipeListener.onClick(RefreshAdapter.this, v, baseViewHolder.getAdapterPosition());
                 }
             }
         });

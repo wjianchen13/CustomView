@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cold.startview.StartView
+        android:id="@+id/startview"
+        android:layout_width="153dp"
+        android:layout_height="30dp" />
+
+</LinearLayout>

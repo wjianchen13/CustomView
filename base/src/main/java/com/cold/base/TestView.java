@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Picture;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -360,18 +359,18 @@ public class TestView extends View {
 //        path.set(src);                              // 大致相当于 path = src;
 //        canvas.drawPath(path,mPaint);
 
+//        canvas.translate(getWidth() / 2, getHeight() / 2);  // 移动坐标系到屏幕中心
+//        canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+//        Path path = new Path();                     // path中添加一个圆形(圆心在坐标原点)
+//        path.addCircle(0,0,100, Path.Direction.CW);
+//        Path dst = new Path();                      // dst中添加一个矩形
+//        dst.addRect(-200,-200,200,200, Path.Direction.CW);
+//        path.offset(300,0,dst);                     // 平移
+//        canvas.drawPath(path,mPaint);               // 绘制path
+//        mPaint.setColor(Color.BLUE);                // 更改画笔颜色
+//        canvas.drawPath(dst,mPaint);                // 绘制dst
 
 
-        canvas.translate(getWidth() / 2, getHeight() / 2);  // 移动坐标系到屏幕中心
-        canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
-        Path path = new Path();                     // path中添加一个圆形(圆心在坐标原点)
-        path.addCircle(0,0,100, Path.Direction.CW);
-        Path dst = new Path();                      // dst中添加一个矩形
-        dst.addRect(-200,-200,200,200, Path.Direction.CW);
-        path.offset(300,0,dst);                     // 平移
-        canvas.drawPath(path,mPaint);               // 绘制path
-        mPaint.setColor(Color.BLUE);                // 更改画笔颜色
-        canvas.drawPath(dst,mPaint);                // 绘制dst
 
 
     }

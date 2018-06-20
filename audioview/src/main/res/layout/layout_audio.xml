@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:audioview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_living_state_selector"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp">
+
+    <com.cold.audioview.widget.AudioView
+        android:id="@+id/av_test"
+        android:layout_width="16dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        audioview:linear_width="2dp"
+        audioview:linear_margin="3dp"
+        audioview:linear_padding="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="直播中"
+        android:textSize="11dp"
+        android:layout_marginLeft="4dp"/>
+
+</LinearLayout>

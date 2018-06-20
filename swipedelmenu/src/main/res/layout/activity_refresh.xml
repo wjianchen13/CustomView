@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.cold.swipedelmenu.view.MySmartRefreshLayout
+        android:id="@+id/smart_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="false">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/smart_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#efefef"/>
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/smart_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="#ff808080"
+            app:srlPrimaryColor="#ffffff"
+            app:srlTextSizeTime="12sp"
+            app:srlTextSizeTitle="13sp"/>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/smart_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="#ff808080"
+            app:srlPrimaryColor="#ffffff"
+            app:srlTextSizeTime="12dp"
+            app:srlTextSizeTitle="13sp"/>
+
+    </com.cold.swipedelmenu.view.MySmartRefreshLayout>
+</RelativeLayout>
